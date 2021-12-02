@@ -19,23 +19,37 @@
         </div>
     </div>
 </header><br>
-<div id="message">
+
+<script type="text/javascript">
+    function post(pseudo, message) {
+        let fil=document.getElementById("fil");
+        let newP=document.createElement('p');
+
+        newP.textContent='>>'+pseudo+' : '+message;
+        fil.prepend(newP);
+    }
+</script>
+
+<div id="message_div">
     <form method="post">
         <div class="mb-3">
-            <label  class="form-label">Pseudo</label>
-            <input type="text" class="form-control" name="pseudo" required>
+            <label  for="pseudo" class="form-label">Pseudo</label>
+            <input type="text" class="form-control" name="pseudo" id="pseudo" required>
 
         </div>
 
         <div class="mb-3">
-            <label  class="form-label">entrez votre message </label>
-            <input type="text" class="form-control" name="messsage" required>
+            <label  for="message" class="form-label">entrez votre message </label>
+            <input type="text" class="form-control" name="message" id="message" required>
         </div>
 
         <button id="boutonPost" type="submit" name="valider" class="btn btn-primary">Poster</button>
     </form>
 </div>
 
+<div id="fil">
+
+</div>
 
 </body>
 
