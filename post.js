@@ -1,6 +1,6 @@
 function post(pseudo, message) {
-    let fil=document.getElementById("fil");
+    //let fil=document.getElementById("fil");
     let newP=document.createElement('p');
     newP.textContent='>>'+pseudo+' : '+message;
-    fil.prepend(newP);
+    document.getElementById("fil").prepend(newP);
 }
