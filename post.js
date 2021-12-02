@@ -1,9 +1,10 @@
 function post(pseudo, message) {
     let fil=document.getElementById("fil");
     let newP=document.createElement('p');
-
-    newP.innerText = pseudo + " " + message;
     fil.append(newP);
+    let blabla = pseudo + " " + message;
+    newP.innerText = newP.append(blabla);
+
     //newP.textContent='>>'+pseudo+' : '+message;
     //fil.prepend(newP);
 }
